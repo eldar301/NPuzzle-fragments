@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name" translatable="false">N Puzzle</string>
+    <string name="play_button_title">Play</string>
+    <string name="settings_button_title">Settings</string>
+    <string name="about_button_title">About</string>
+    <string name="field_size">Field size</string>
+    <string name="field_size_description">Choose 3x3, 4x4 or 5x5</string>
+    <string name="field_type">Field type</string>
+    <string name="field_type_conventional">Conventional</string>
+    <string name="field_type_circle">Spiral</string>
+    <string name="field_type_description">Choose conventional or spiral</string>
+    <string name="game_settings_title">Game settings</string>
+    <string name="cell_back_settings_title">Back of the cell</string>
+    <string name="cell_back_settings_blue">Blue</string>
+    <string name="cell_back_settings_red">Red</string>
+    <string name="graphic_settings_title">Graphic settings</string>
+    <string name="cell_back_settings_description">Choose suitable</string>
+    <string name="solved_title">Congratulations!</string>
+    <string name="solved_question">Would you like to start new game?</string>
+    <string name="solved_start">Start</string>
+    <string name="solved_decline">Decline</string>
+    <string name="cell_back_settings_orange">Orange</string>
+    <string name="about_name">Eldar Goloviznin</string>
+    <string name="about_action_go_to_github_description">Go to github.com</string>
+    <string name="about_github_link" translatable="false">https://github.com/radleweird</string>
+</resources>

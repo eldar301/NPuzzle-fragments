@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/game_settings_title">
+        <ListPreference
+            android:key="@string/preferences_field_size"
+            android:title="@string/field_size"
+            android:summary="@string/field_size_description"
+            android:entries="@array/field_size_array"
+            android:entryValues="@array/field_size_values_array"
+            android:defaultValue="@string/default_preferences_field_size" />
+
+        <ListPreference
+            android:key="@string/preferences_field_type"
+            android:title="@string/field_type"
+            android:summary="@string/field_type_description"
+            android:entries="@array/field_type_array"
+            android:entryValues="@array/field_type_array"
+            android:defaultValue="@string/default_preferences_field_type" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/graphic_settings_title">
+        <ListPreference
+            android:key="@string/preferences_cell_back"
+            android:title="@string/cell_back_settings_title"
+            android:summary="@string/cell_back_settings_description"
+            android:entries="@array/cell_back_array"
+            android:entryValues="@array/cell_back_values_array"
+            android:defaultValue="@string/default_preferences_cell_back" />
+    </PreferenceCategory>
+</PreferenceScreen>
