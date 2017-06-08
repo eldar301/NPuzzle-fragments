@@ -4,6 +4,6 @@
     <string name="preferences_field_type" translatable="false">preferences_field_type</string>
     <string name="preferences_cell_back" translatable="false">preferences_cell_back</string>
     <string name="default_preferences_field_size" translatable="false">4</string>
-    <string name="default_preferences_field_type" translatable="false">@string/field_type_conventional</string>
+    <string name="default_preferences_field_type" translatable="false">conventional</string>
     <string name="default_preferences_cell_back" translatable="false">#e128b3ef</string>
 </resources>

@@ -18,10 +18,15 @@
         <item>@string/field_type_circle</item>
     </string-array>
 
+    <string-array name="field_type_values_array">
+        <item>conventional</item>
+        <item>spiral</item>
+    </string-array>
+
     <string-array name="cell_back_array">
         <item>@string/cell_back_settings_blue</item>
         <item>@string/cell_back_settings_red</item>
-        <item>@string/cell_back_settings_orange</item>
+        <item>@string/cell_back_settings_yellow</item>
     </string-array>
 
     <string-array name="cell_back_values_array">

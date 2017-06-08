@@ -1,16 +1,28 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.goloviznin.eldar.npuzzle.MainActivity">
+    tools:context="com.goloviznin.eldar.npuzzle.activitities.MainActivity">
+
+    <item
+        android:id="@+id/action_newgame"
+        android:orderInCategory="100"
+        android:title="@string/menu_newgame"
+        app:showAsAction="never" />
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
-        android:title="@string/settings_button_title"
+        android:title="@string/menu_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_myo"
+        android:orderInCategory="100"
+        android:title="@string/menu_myo"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/action_about"
         android:orderInCategory="100"
-        android:title="@string/about_button_title"
+        android:title="@string/menu_about"
         app:showAsAction="never" />
 </menu>

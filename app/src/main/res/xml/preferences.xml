@@ -16,7 +16,7 @@
             android:title="@string/field_type"
             android:summary="@string/field_type_description"
             android:entries="@array/field_type_array"
-            android:entryValues="@array/field_type_array"
+            android:entryValues="@array/field_type_values_array"
             android:defaultValue="@string/default_preferences_field_type" />
     </PreferenceCategory>
 

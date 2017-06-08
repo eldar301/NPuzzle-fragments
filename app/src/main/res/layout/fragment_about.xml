@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.goloviznin.eldar.npuzzle.AboutActivityFragment"
+    tools:context="com.goloviznin.eldar.npuzzle.fragments.AboutActivityFragment"
     tools:showIn="@layout/activity_about">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageButton
+        android:id="@+id/avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/avatar"
+        android:layout_centerInParent="true"
+        android:background="@null"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/avatar"
+        android:text="@string/about_name" />
+
+</RelativeLayout>

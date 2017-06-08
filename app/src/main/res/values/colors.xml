@@ -6,6 +6,8 @@
     <color name="fadedColor">#40ffffff</color>
     <color name="gradientStartColor">#E6872E</color>
     <color name="gradientEndColor">#2ECAE6</color>
-    <color name="fadedGradientStartColor">#40ffffff</color>
-    <color name="fadedGradientEndColor">#00ffffff</color>
+    <color name="fadedGradientStartColor">#00ffffff</color>
+    <color name="fadedGradientEndColor">#40ffffff</color>
+    <color name="accent_material_light_1">#004942</color>
+    <color name="fieldBorderColor">#16000000</color>
 </resources>

@@ -1,7 +1,9 @@
-package com.goloviznin.eldar.npuzzle;
+package com.goloviznin.eldar.npuzzle.fragments;
 
 import android.os.Bundle;
 import android.support.v7.preference.PreferenceFragmentCompat;
+
+import com.goloviznin.eldar.npuzzle.R;
 
 public class SettingsActivityFragment extends PreferenceFragmentCompat {
 

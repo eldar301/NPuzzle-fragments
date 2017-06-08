@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="play_button_title">Играть</string>
-    <string name="settings_button_title">Настройки</string>
+    <string name="menu_settings">Настройки</string>
     <string name="field_size">Размер поля</string>
     <string name="field_size_description">Выберите 3х3, 4х4 или 5х5</string>
     <string name="field_type">Тип поля</string>
@@ -18,8 +17,11 @@
     <string name="solved_question">Начать новую игру?</string>
     <string name="solved_start">Начать</string>
     <string name="solved_decline">Отказаться</string>
-    <string name="cell_back_settings_orange">Оранжевая</string>
+    <string name="cell_back_settings_yellow">Желтая</string>
     <string name="about_action_go_to_github_description">Перейти на github.com</string>
     <string name="about_name">Эльдар Головизнин</string>
-    <string name="about_button_title">Об авторе</string>
+    <string name="menu_about">Об авторе</string>
+    <string name="menu_newgame">Новая игра</string>
+    <string name="action_settings">Настройки</string>
+    <string name="menu_myo">Myo браслет</string>
 </resources>
