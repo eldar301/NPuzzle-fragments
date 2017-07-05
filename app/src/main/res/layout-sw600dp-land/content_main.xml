@@ -2,26 +2,41 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:layout_behavior= "@string/appbar_scrolling_view_behavior"
     android:baselineAligned="false">
 
     <fragment
-        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/mainFragment"
-        android:name="com.goloviznin.eldar.npuzzle.fragments.MainActivityFragment"
+        android:name="com.goloviznin.eldar.npuzzle.fragments.MainFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="2"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main"/>
 
     <FrameLayout
-        android:id="@+id/fragmentContainer"
+        android:id="@id/menuFragmentContainer"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@drawable/faded_gradient" />
+        android:visibility="invisible">
+
+        <fragment
+            android:id="@+id/menuFragment"
+            android:name="com.goloviznin.eldar.npuzzle.fragments.MenuFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_menu"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/myoActionFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
 
 </LinearLayout>

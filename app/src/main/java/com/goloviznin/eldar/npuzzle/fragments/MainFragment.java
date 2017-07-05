@@ -14,13 +14,11 @@ import android.view.ViewGroup;
 
 import com.goloviznin.eldar.npuzzle.R;
 import com.goloviznin.eldar.npuzzle.model.game.Npuzzle;
-import com.goloviznin.eldar.npuzzle.listeners.CellActionCallback;
 import com.goloviznin.eldar.npuzzle.listeners.CellActionListener;
+import com.goloviznin.eldar.npuzzle.tools.Direction;
 import com.goloviznin.eldar.npuzzle.views.Cell;
 
-import java.io.Serializable;
-
-public class MainActivityFragment extends Fragment implements CellActionCallback {
+public class MainFragment extends Fragment implements CellActionListener.CellActionCallback {
 
     private Npuzzle game;
     private GridLayout fieldGrid;
@@ -30,7 +28,7 @@ public class MainActivityFragment extends Fragment implements CellActionCallback
     private String fieldType;
     private int cellBackColor;
 
-    private final String GAME_INSTANCE_KEY = "GAME_INSTANCE_KEY";
+    private final String GAME_RESTORE_KEY = "GAME_RESTORE_KEY";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,8 +40,7 @@ public class MainActivityFragment extends Fragment implements CellActionCallback
         if (savedInstanceState == null) {
             createGameInstance();
         } else {
-            Serializable serializedGame = savedInstanceState.getSerializable(GAME_INSTANCE_KEY);
-            game = (Npuzzle) serializedGame;
+            game = (Npuzzle) savedInstanceState.getSerializable(GAME_RESTORE_KEY);
         }
         instantiateFieldGrid();
         applyCellBackColor();
@@ -53,7 +50,7 @@ public class MainActivityFragment extends Fragment implements CellActionCallback
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putSerializable(GAME_INSTANCE_KEY, game);
+        outState.putSerializable(GAME_RESTORE_KEY, game);
     }
 
     @Override
@@ -64,7 +61,6 @@ public class MainActivityFragment extends Fragment implements CellActionCallback
             gameSolvedDialog = null;
         }
     }
-
 
     public void startNewGame() {
         createGameInstance();
@@ -148,18 +144,42 @@ public class MainActivityFragment extends Fragment implements CellActionCallback
         }
     }
 
+    public void turnInDirection(Direction direction) {
+        boolean movementResult = false;
+        switch (direction) {
+            case UP:
+                movementResult = game.turnUp();
+                break;
+            case RIGHT:
+                movementResult = game.turnRight();
+                break;
+            case DOWN:
+                movementResult = game.turnDown();
+                break;
+            case LEFT:
+                movementResult = game.turnLeft();
+                break;
+        }
+        if (movementResult) {
+            transformCells(game.getCurrentField().getField());
+            if (game.isSolved()) {
+                showGameSolvedDialog();
+            }
+        }
+    }
+
     @Override
     public void onCellPressed() {
         showFiniteField();
     }
 
+    private void showFiniteField() {
+        transformCells(game.getFiniteField().getField());
+    }
+
     @Override
     public void onCellReleased() {
         showCurrentField();
-    }
-
-    private void showFiniteField() {
-        transformCells(game.getFiniteField().getField());
     }
 
     private void showCurrentField() {

@@ -4,22 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.goloviznin.eldar.npuzzle.fragments.AboutFragment">
+    tools:context="com.goloviznin.eldar.npuzzle.fragments.MyoScanFragment">
 
     <ImageButton
-        android:id="@+id/avatar"
+        android:id="@+id/searchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/avatar"
         android:layout_centerInParent="true"
+        android:src="@drawable/myo_icon_blue_dot"
         android:background="@null"
-        android:contentDescription="@string/about_action_go_to_github_description" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/avatar"
-        android:text="@string/about_name" />
+        android:contentDescription="@string/myo_action_find_myo" />
 
 </RelativeLayout>

@@ -4,25 +4,17 @@
     tools:context="com.goloviznin.eldar.npuzzle.activitities.MainActivity">
 
     <item
-        android:id="@+id/action_newgame"
+        android:id="@+id/action_new_game"
         android:orderInCategory="100"
-        android:title="@string/menu_newgame"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/menu_settings"
-        app:showAsAction="never" />
+        android:icon="@drawable/ic_restart_game_black_24dp"
+        android:title="@string/menu_new_game"
+        app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/action_myo"
+        android:id="@+id/action_show_menu"
         android:orderInCategory="100"
-        android:title="@string/menu_myo"
-        app:showAsAction="never" />
+        android:icon="@drawable/ic_menu_black_24dp"
+        android:title="@string/menu_settings_title"
+        app:showAsAction="always" />
 
-    <item
-        android:id="@+id/action_about"
-        android:orderInCategory="100"
-        android:title="@string/menu_about"
-        app:showAsAction="never" />
 </menu>

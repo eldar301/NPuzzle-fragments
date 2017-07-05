@@ -3,5 +3,5 @@
     <integer name="cell_transparency_level">64</integer>
     <integer name="gradient_angle">45</integer>
     <integer name="faded_gradient_angle">45</integer>
-    <integer name="fragmentReplaceAnimationDuration">250</integer>
+    <integer name="fragmentReplaceAnimationDuration">200</integer>
 </resources>

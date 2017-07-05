@@ -3,9 +3,15 @@ package com.goloviznin.eldar.npuzzle.listeners;
 import android.view.MotionEvent;
 import android.view.View;
 
-public class CellActionListener implements View.OnClickListener, View.OnLongClickListener, View.OnTouchListener{
+public class CellActionListener implements View.OnClickListener, View.OnLongClickListener, View.OnTouchListener {
 
     private CellActionCallback callback;
+
+    public interface CellActionCallback {
+        void onCellClick(View view);
+        void onCellPressed();
+        void onCellReleased();
+    }
 
     public CellActionListener(CellActionCallback callback) {
         this.callback = callback;
@@ -30,6 +36,7 @@ public class CellActionListener implements View.OnClickListener, View.OnLongClic
         if (event.getAction() == MotionEvent.ACTION_UP && isLongClicked) {
             isLongClicked = false;
             callback.onCellReleased();
+            return true;
         }
         return false;
     }
