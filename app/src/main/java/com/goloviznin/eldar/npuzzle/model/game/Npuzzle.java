@@ -1,39 +1,46 @@
 package com.goloviznin.eldar.npuzzle.model.game;
 
-import com.goloviznin.eldar.npuzzle.model.astar.Astar;
+import com.goloviznin.eldar.npuzzle.model.astar.SearchAlgorithm;
 import com.goloviznin.eldar.npuzzle.model.astar.SearchResult;
 
 import java.io.Serializable;
 import java.util.List;
 
-public class Npuzzle implements Serializable {
+public class NPuzzle implements Serializable {
 
-    public static int SHUFFLE_COUNT = 200;
-
-    private final int fieldSize;
     private Field currentField;
-    private Field finiteField;
+    private final Field finiteField;
 
-    protected Npuzzle(int fieldSize, int[] finiteArrangement) {
-        this.fieldSize = fieldSize;
-        try {
-            finiteField = new Field(fieldSize, finiteArrangement);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    private NPuzzle(int fieldSize, int[] finiteArrangement) {
+        finiteField = new Field(fieldSize, finiteArrangement);
     }
 
-    public static Npuzzle createConventional(int size) {
+    public static NPuzzle newInstance(FieldType type, int size) {
+        NPuzzle npuzzle;
+        switch (type) {
+            case CONVENTIONAL:
+                npuzzle = createConventional(size);
+                break;
+            case SPIRAL:
+                npuzzle = createSpiral(size);
+                break;
+            default:
+                npuzzle = createConventional(size);
+                break;
+        }
+        npuzzle.generateInitialField();
+        return npuzzle;
+    }
+
+    private static NPuzzle createConventional(int size) {
         int[] finiteArray = new int[size * size];
         for (int idx = 0; idx < finiteArray.length; ++idx) {
             finiteArray[idx] = (idx + 1) % finiteArray.length;
         }
-        Npuzzle npuzzle = new Npuzzle(size, finiteArray);
-        npuzzle.generateInitialField(SHUFFLE_COUNT);
-        return npuzzle;
+        return new NPuzzle(size, finiteArray);
     }
 
-    public static Npuzzle createSpiral(int size) {
+    private static NPuzzle createSpiral(int size) {
         int[] finiteArray = new int[size * size];
         final int RIGHT = 1;
         final int LEFT = -1;
@@ -57,14 +64,12 @@ public class Npuzzle implements Serializable {
             }
             pos += dir;
         }
-        Npuzzle npuzzle = new Npuzzle(size, finiteArray);
-        npuzzle.generateInitialField(SHUFFLE_COUNT);
-        return npuzzle;
+        return new NPuzzle(size, finiteArray);
     }
 
-    public void generateInitialField(int shuffleCount) {
+    private void generateInitialField() {
         currentField = new Field(finiteField);
-        currentField.shuffle(shuffleCount);
+        currentField.shuffle();
     }
 
     public Field getCurrentField() {
@@ -100,7 +105,7 @@ public class Npuzzle implements Serializable {
     }
 
     public List<Field> solve() {
-        Astar<Field, FieldHandler> solver = new Astar<>(new FieldHandler());
+        SearchAlgorithm<Field, FieldHandler> solver = new SearchAlgorithm<>(new FieldHandler());
         SearchResult<Field> solution =  solver.doSearch(currentField, finiteField);
         currentField = new Field(finiteField);
         return solution.getStack();

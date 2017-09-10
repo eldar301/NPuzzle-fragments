@@ -24,12 +24,8 @@
     <string name="about_github_link" translatable="false">https://github.com/radleweird</string>
     <string name="menu_new_game">New game</string>
     <string name="menu_myo_title">Myo Armband</string>
-    <string name="menu_menu">Menu</string>
     <string name="error_while_start_scanning">Error while start scanning</string>
     <string name="myo_action_find_myo">Find myo</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="myo_scan_hint">Click below to scan</string>
+    <string name="about_hint">Check my GitHub</string>
 </resources>

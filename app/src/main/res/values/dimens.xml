@@ -2,4 +2,5 @@
     <dimen name="fieldMargin">16dp</dimen>
     <dimen name="fieldBorderWidth">1dp</dimen>
     <dimen name="cellMargin">1dp</dimen>
+    <dimen name="textMargin">5dp</dimen>
 </resources>

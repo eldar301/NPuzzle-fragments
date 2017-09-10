@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="field_size_array">
+    <string-array name="field_size_array" translatable="false">
         <item>3x3</item>
         <item>4x4</item>
         <item>5x5</item>
     </string-array>
 
-    <string-array name="field_size_values_array">
+    <string-array name="field_size_values_array" translatable="false">
         <item>3</item>
         <item>4</item>
         <item>5</item>
     </string-array>
 
-    <string-array name="field_type_array">
+    <string-array name="field_type_array" translatable="false">
         <item>@string/field_type_conventional</item>
         <item>@string/field_type_circle</item>
     </string-array>
 
-    <string-array name="field_type_values_array">
+    <string-array name="field_type_values_array" translatable="false">
         <item>conventional</item>
         <item>spiral</item>
     </string-array>
 
-    <string-array name="cell_back_array">
+    <string-array name="cell_back_array" translatable="false">
         <item>@string/cell_back_settings_blue</item>
         <item>@string/cell_back_settings_red</item>
         <item>@string/cell_back_settings_yellow</item>
     </string-array>
 
-    <string-array name="cell_back_values_array">
+    <string-array name="cell_back_values_array" translatable="false">
         <item>#e128b3ef</item>
         <item>#e1ec5237</item>
         <item>#e1ffa500</item>

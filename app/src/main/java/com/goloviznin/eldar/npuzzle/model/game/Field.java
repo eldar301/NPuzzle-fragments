@@ -8,30 +8,18 @@ import java.util.Random;
 
 public class Field extends State implements Serializable {
 
-    private int[] field;
-    private int size;
+    private static final int SHUFFLE_COUNT = 200;
+
+    private final int[] field;
+    private final int size;
     private int zeroIndex;
 
-    public Field(int size, int[] field) throws Exception {
-        if (field == null) {
-            throw new Exception("[field] could not be null");
-        }
-        if (size * size != field.length) {
-            throw new Exception(String.format("Wrong given [size = %1$d] with [field.length = %2$d]", size, field.length));
-        }
-
-        int zerosCount = 0;
+    public Field(int size, int[] field) {
         for (int idx = 0; idx < field.length; ++idx) {
             if (field[idx] == 0) {
                 zeroIndex = idx;
-                ++zerosCount;
             }
         }
-
-        if (zerosCount != 1) {
-            throw new Exception(String.format("There are should be only one zero instance, but found [%1$d]", zerosCount));
-        }
-
         this.size = size;
         this.field = field;
     }
@@ -54,7 +42,7 @@ public class Field extends State implements Serializable {
         return size;
     }
 
-    public int indexOf(int value) {
+    private int indexOf(int value) {
         for (int idx = 0; idx < field.length; ++idx) {
             if (field[idx] == value) return idx;
         }
@@ -118,13 +106,10 @@ public class Field extends State implements Serializable {
         }
     }
 
-    void shuffle(int times) {
-        if (times <= 0) {
-            return;
-        }
+    void shuffle() {
         int count = 0;
         Random generator = new Random(System.currentTimeMillis());
-        while (count != times) {
+        while (count != SHUFFLE_COUNT) {
             boolean isTurnSuccessful = false;
             switch (generator.nextInt() % 4) {
                 case 0: isTurnSuccessful = turnDown();

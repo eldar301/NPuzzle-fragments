@@ -11,32 +11,18 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.goloviznin.eldar.npuzzle.fragments.MainFragment"
+        android:name="com.goloviznin.eldar.npuzzle.view.fragments.MainFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="2"
         tools:layout="@layout/fragment_main"/>
 
-    <FrameLayout
-        android:id="@id/menuFragmentContainer"
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.goloviznin.eldar.npuzzle.view.fragments.MenuFragment"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:visibility="invisible">
-
-        <fragment
-            android:id="@+id/menuFragment"
-            android:name="com.goloviznin.eldar.npuzzle.fragments.MenuFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout="@layout/fragment_menu"/>
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/myoActionFragmentContainer"
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone" />
+        tools:layout="@layout/fragment_menu"/>
 
 </LinearLayout>

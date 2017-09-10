@@ -23,7 +23,8 @@
     <string name="menu_about_title">Об авторе</string>
     <string name="menu_new_game">Новая игра</string>
     <string name="menu_myo_title">Myo браслет</string>
-    <string name="menu_menu">Меню</string>
     <string name="error_while_start_scanning">Невозможно начать поиск</string>
     <string name="myo_action_find_myo">Найти Myo</string>
+    <string name="myo_scan_hint">Нажмите ниже для поиска</string>
+    <string name="about_hint">Мой GitHub</string>
 </resources>

@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context="com.goloviznin.eldar.npuzzle.fragments.MainFragment"
+    tools:context=".view.fragments.MainFragment"
     tools:showIn="@layout/activity_main">
 
-
-    <com.goloviznin.eldar.npuzzle.views.SquareGridLayout
+    <com.goloviznin.eldar.npuzzle.view.SquareGridLayout
         android:id="@+id/fieldGrid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.goloviznin.eldar.npuzzle.fragments.MenuFragment"
+    tools:context=".view.fragments.MenuFragment"
     android:background="@drawable/faded_gradient">
 
     <android.support.design.widget.TabLayout

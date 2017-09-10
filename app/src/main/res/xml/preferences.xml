@@ -30,4 +30,5 @@
             android:entryValues="@array/cell_back_values_array"
             android:defaultValue="@string/default_preferences_cell_back" />
     </PreferenceCategory>
+
 </PreferenceScreen>

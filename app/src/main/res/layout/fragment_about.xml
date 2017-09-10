@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.goloviznin.eldar.npuzzle.fragments.AboutFragment">
+    tools:context=".view.fragments.AboutFragment">
 
     <ImageButton
         android:id="@+id/avatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/avatar"
+        android:src="@drawable/github"
         android:layout_centerInParent="true"
         android:background="@null"
         android:contentDescription="@string/about_action_go_to_github_description" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_above="@id/avatar"
+        android:layout_margin="@dimen/textMargin"
+        android:text="@string/about_hint"/>
 
     <TextView
         android:layout_width="wrap_content"
