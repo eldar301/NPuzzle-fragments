@@ -13,8 +13,8 @@
         android:id="@+id/mainFragment"
         android:name="com.goloviznin.eldar.npuzzle.view.fragments.MainFragment"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
         android:layout_weight="2"
+        android:layout_height="match_parent"
         tools:layout="@layout/fragment_main"/>
 
     <fragment
